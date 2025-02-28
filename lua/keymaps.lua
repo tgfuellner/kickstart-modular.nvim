@@ -45,4 +45,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left<CR>', { desc = 'Open Neo-tree' })
+
 -- vim: ts=2 sts=2 sw=2 et
