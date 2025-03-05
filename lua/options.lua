@@ -25,6 +25,7 @@ end)
 
 -- Enable break indent
 vim.opt.breakindent = true
+vim.opt.breakindentopt = 'list:2'
 
 -- Save undo history
 vim.opt.undofile = true
