@@ -63,6 +63,8 @@ vim.opt.cursorcolumn = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+vim.opt.tabstop = 4
+
 -- Letzt Cursorposition beim Starten
 local group = vim.api.nvim_create_augroup('jump_last_position', { clear = true })
 vim.api.nvim_create_autocmd('BufReadPost', {
