@@ -79,4 +79,15 @@ vim.api.nvim_create_autocmd('BufReadPost', {
 })
 
 -- Foldings speichern und laden
+vim.api.nvim_create_autocmd({ 'BufWinLeave' }, {
+  pattern = { '*.*' },
+  desc = 'save view (folds), when closing file',
+  command = 'mkview',
+})
+vim.api.nvim_create_autocmd({ 'BufWinEnter' }, {
+  pattern = { '*.*' },
+  desc = 'load view (folds), when opening file',
+  command = 'silent! loadview',
+})
+
 -- vim: ts=2 sts=2 sw=2 et
