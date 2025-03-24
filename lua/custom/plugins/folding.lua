@@ -60,6 +60,11 @@ return {
 
     require('ufo').setup {
       fold_virt_text_handler = handler,
+      provider_selector = function(_, filetype, _)
+        if filetype == 'yaml' then
+          return { 'indent' }
+        end
+      end,
     }
   end,
 }
