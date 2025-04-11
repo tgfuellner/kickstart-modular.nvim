@@ -47,4 +47,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left<CR>', { desc = 'Open Neo-tree' })
 
+vim.keymap.set('n', '<leader>v', ':ObsidianToday<CR>', { desc = '[V]imwiki Heute' })
+vim.keymap.set('n', '<leader>vg', ':ObsidianYesterday<CR>', { desc = '[V]imwiki [G]estern' })
+vim.keymap.set('n', '<leader>vd', ':ObsidianDailies -50 2<CR>', { desc = '[V]imwiki [D]ailies 50 Tage' })
+vim.keymap.set('n', '<leader>vs', ':ObsidianSearch<CR>', { desc = '[V]imwiki [S]earch' })
+
 -- vim: ts=2 sts=2 sw=2 et

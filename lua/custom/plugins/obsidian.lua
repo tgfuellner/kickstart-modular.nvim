@@ -24,11 +24,14 @@ return {
     end,
   },
   config = function()
-    require('obsidian').setup {
+    local obsidian = require 'obsidian'
+    obsidian.setup {
       workspaces = {
         {
           name = 'vimwiki',
           path = '~/vimwiki',
+          -- name = 'workwiki',
+          -- path = '~/workwiki',
         },
       },
       daily_notes = {
@@ -52,11 +55,17 @@ return {
         -- return tostring(os.time()) .. '-' .. suffix
         return suffix
       end,
+      ui = {
+        enable = false,
+      },
     }
-    vim.opt.conceallevel = 1
+    -- vim.opt.conceallevel = 1
   end,
   cmd = {
     'ObsidianNew',
     'ObsidianToday',
+    'ObsidianYesterday',
+    'ObsidianDailies',
+    'ObsidianSearch',
   },
 }
