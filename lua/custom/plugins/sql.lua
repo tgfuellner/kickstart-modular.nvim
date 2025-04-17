@@ -13,5 +13,8 @@ return {
   init = function()
     -- Your DBUI configuration
     vim.g.db_ui_use_nerd_fonts = 1
+
+    -- Geht nicht:
+    -- vim.api.nvim_call_function('db_ui#utils#set_mapping', { '<Leader>q', '<Plug>(DBUI_ExecuteQuery)' })
   end,
 }
